@@ -38,5 +38,5 @@ model.fit(X_train, y_train)
 print("Accuracy:", model.score(X_test, y_test))
 
 # Save model
-pickle.dump(model, open("model.pkl", "wb"))
-pickle.dump(vectorizer, open("vectorizer.pkl", "wb"))
+pickle.dump(model, open("models/model.pkl", "wb"))
+pickle.dump(vectorizer, open("models/vectorizer.pkl", "wb"))

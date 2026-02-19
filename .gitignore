@@ -1,4 +1,32 @@
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Logs
 logs.txt
+*.log
+
+# Environment files
 .env
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Streamlit cache
+.streamlit/
+
+# Model files (optional — only ignore if too large)
+# models/model.pkl
+# models/vectorizer.pkl
+
+# Dataset (optional)
+# dataset.csv

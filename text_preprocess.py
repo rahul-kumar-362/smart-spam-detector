@@ -24,3 +24,4 @@ def clean_text(text):
     words = [word for word in words if word not in STOPWORDS]
 
     return " ".join(words)
+#I intentionally replaced NLTK with a custom lightweight preprocessing pipeline because cloud environments often restrict downloads and heavy dependencies. This made my model faster, portable, and production-ready.
