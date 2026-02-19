@@ -13,6 +13,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
 # Ensure models directory exists
 os.makedirs("models", exist_ok=True)
 
+# Load dataset
 logging.info("Loading dataset...")
 try:
     df = pd.read_csv("dataset.csv", encoding="latin-1")
@@ -20,9 +21,12 @@ except FileNotFoundError:
     logging.error("dataset.csv not found! Training aborted.")
     exit(1)
 
+# Ensure necessary columns exist (renaming if old format is still present, just in case)
+if 'v1' in df.columns:
+    df = df.rename(columns={'v1': 'label', 'v2': 'text'})
+
 # Keep only required columns
-df = df[["v1", "v2"]]
-df.columns = ["label", "text"]
+df = df[["label", "text"]]
 
 logging.info(f"Dataset loaded: {len(df)} records")
 
