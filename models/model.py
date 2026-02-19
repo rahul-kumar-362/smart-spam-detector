@@ -14,7 +14,7 @@ from text_preprocess import clean_text
 
 # ---------------- LOGGING ----------------
 logging.basicConfig(
-    filename="logs.txt",
+    stream=sys.stdout,
     level=logging.INFO,
     format="%(asctime)s - %(message)s"
 )
