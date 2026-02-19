@@ -1,6 +1,11 @@
 import logging
 import pickle
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
 from text_preprocess import clean_text
+
 import streamlit as st
 
 logging.basicConfig(
